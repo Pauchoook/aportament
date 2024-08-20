@@ -1,0 +1,19 @@
+:root {
+  --content-width: 1440px;
+  --offset-width: 15px;
+  --container-width: calc(var(--content-width) + (var(--offset-width) * 2));
+  @include desktop {
+    --content-width: 1000px;
+  }
+}
+
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  padding: 0 var(--offset-width);
+  margin: 0 auto;
+  @include tablet {
+    padding: 0 20px;
+    max-width: none;
+  }
+}
