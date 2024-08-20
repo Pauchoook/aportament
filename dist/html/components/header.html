@@ -1,31 +1,40 @@
 <header class="header">
-	<div class="header__top">
-		<ul class="list header__top-list"></ul>
-	</div>
 	<div class="container header__container">
+		<button class="btn header__btn-burger" id="btn-burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 		<a href="#" class="header__logo">
 			<img src="img/logo.svg" alt="Logo" class="header__logo-img" />
 		</a>
 		<nav class="header__nav">
-			<ul class="list header__nav-list">
-				<li data-da=".header__top-list, 743, 0" class="dropdown">
-					<svg class="header__nav-btn-icon">
-						<use xlink:href="img/icons/icons.svg#icon-repair"></use>
-					</svg>
-					<button class="btn header__dropdown-btn">
-						<span>Ремонт</span>
+			<ul data-spollers="993,max" class="list header__nav-list" id="burger">
+				<li class="dropdown header__nav-item">
+					<div data-spoller class="btn header__spoller-btn">
+						<a href="#">Ремонт</a>
+						<div class="header__spoller-plus">
+							<span></span>
+							<span></span>
+						</div>
 						<svg class="header__dropdown-arrow">
 							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
 						</svg>
-					</button>
+					</div>
 					<div class="dropdown__item">
 						<div class="dropdown__body">
-							<ul class="list header__dropdown-list">
-								<li class="dropdown">
-									<span>Кнопка выпадающего меню</span>
+							<ul class="list">
+								<li class="dropdown header__spoller-item">
+									<div data-spoller class="header__subspoller-btn">
+										<a href="#">Кнопка выпадающего меню</a>
+										<div class="header__spoller-plus">
+											<span></span>
+											<span></span>
+										</div>
+									</div>
 									<div class="dropdown__item">
 										<div class="dropdown__body">
-											<ul class="list">
+											<ul class="list header__subspoller-list">
 												<li>
 													<a href="#">Подjijijijiменю</a>
 												</li>
@@ -39,37 +48,44 @@
 										</div>
 									</div>
 								</li>
-								<li>
+								<li class="header__spoller-item">
 									<a href="#">Ссылка на страницу</a>
 								</li>
-								<li>
+								<li class="header__spoller-item">
 									<a href="#">Ссылка на страницу</a>
 								</li>
-								<li>
+								<li class="header__spoller-item">
 									<a href="#">Ссылка на страницу</a>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</li>
-				<li data-da=".header__top-list, 743, 2" class="dropdown">
-					<svg class="header__nav-btn-icon">
-						<use xlink:href="img/icons/icons.svg#icon-design"></use>
-					</svg>
-					<button class="btn header__dropdown-btn">
-						<span>Дизайн</span>
+				<li class="dropdown header__nav-item">
+					<div data-spoller class="btn header__spoller-btn">
+						<a href="#">Дизайн</a>
+						<div class="header__spoller-plus">
+							<span></span>
+							<span></span>
+						</div>
 						<svg class="header__dropdown-arrow">
 							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
 						</svg>
-					</button>
+					</div>
 					<div class="dropdown__item">
 						<div class="dropdown__body">
-							<ul class="list header__dropdown-list">
-								<li class="dropdown">
-									<span>Кнопка выпадающего меню</span>
-									<div class="dropdown__item left">
+							<ul class="list">
+								<li class="dropdown header__spoller-item">
+									<div data-spoller class="header__subspoller-btn">
+										<a href="#">Кнопка выпадающего меню</a>
+										<div class="header__spoller-plus">
+											<span></span>
+											<span></span>
+										</div>
+									</div>
+									<div class="dropdown__item">
 										<div class="dropdown__body">
-											<ul class="list">
+											<ul class="list header__subspoller-list">
 												<li>
 													<a href="#">Подjijijijiменю</a>
 												</li>
@@ -83,134 +99,93 @@
 										</div>
 									</div>
 								</li>
-								<li>
+								<li class="header__spoller-item">
 									<a href="#">Ссылка на страницу</a>
 								</li>
-								<li>
+								<li class="header__spoller-item">
 									<a href="#">Ссылка на страницу</a>
 								</li>
-								<li>
+								<li class="header__spoller-item">
 									<a href="#">Ссылка на страницу</a>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</li>
-				<li data-da=".header__top-list, 743, 1" class="dropdown right">
-					<svg class="header__nav-btn-icon">
-						<use xlink:href="img/icons/icons.svg#icon-styles"></use>
-					</svg>
-					<button class="btn header__dropdown-btn">
-						<span>Стили</span>
+				<li class="dropdown header__nav-item">
+					<div data-spoller class="btn header__spoller-btn">
+						<a href="#">Стили</a>
+						<div class="header__spoller-plus">
+							<span></span>
+							<span></span>
+						</div>
 						<svg class="header__dropdown-arrow">
 							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
 						</svg>
-					</button>
+					</div>
 					<div class="dropdown__item">
 						<div class="dropdown__body">
-							<ul class="list header__dropdown-list">
-								<li>
+							<ul class="list">
+								<li class="dropdown header__spoller-item">
+									<div data-spoller class="header__subspoller-btn">
+										<a href="#">Кнопка выпадающего меню</a>
+										<div class="header__spoller-plus">
+											<span></span>
+											<span></span>
+										</div>
+									</div>
+									<div class="dropdown__item">
+										<div class="dropdown__body">
+											<ul class="list header__subspoller-list">
+												<li>
+													<a href="#">Подjijijijiменю</a>
+												</li>
+												<li>
+													<a href="#">Подменю</a>
+												</li>
+												<li>
+													<a href="#">Подменю</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="header__spoller-item">
 									<a href="#">Ссылка на страницу</a>
 								</li>
-								<li>
+								<li class="header__spoller-item">
 									<a href="#">Ссылка на страницу</a>
 								</li>
-								<li>
+								<li class="header__spoller-item">
 									<a href="#">Ссылка на страницу</a>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</li>
-				<li class="dropdown">
+				<li class="dropdown header__nav-item">
 					<button class="btn header__dropdown-btn">
 						<span>О нас</span>
 						<svg class="header__dropdown-arrow">
 							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
 						</svg>
 					</button>
-					<div class="dropdown__item">
-						<div class="dropdown__body">
-							<ul class="list header__dropdown-list">
-								<li class="dropdown">
-									<span>Кнопка выпадающего меню</span>
-									<div class="dropdown__item">
-										<div class="dropdown__body">
-											<ul class="list">
-												<li>
-													<a href="#">Подjijijijiменю</a>
-												</li>
-												<li>
-													<a href="#">Контакты</a>
-												</li>
-												<li>
-													<a href="#">Подменю</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="#">Ссылка на страницу</a>
-								</li>
-								<li>
-									<a href="#">Ссылка на страницу</a>
-								</li>
-								<li>
-									<a href="#">Ссылка на страницу</a>
-								</li>
-							</ul>
-						</div>
-					</div>
 				</li>
-				<li class="dropdown">
+				<li class="dropdown header__nav-item">
 					<button class="btn header__dropdown-btn">
 						<span>Оплата</span>
 						<svg class="header__dropdown-arrow">
 							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
 						</svg>
 					</button>
-					<div class="dropdown__item">
-						<div class="dropdown__body">
-							<ul class="list header__dropdown-list">
-								<li class="dropdown">
-									<span>Кнопка выпадающего меню</span>
-									<div class="dropdown__item">
-										<div class="dropdown__body">
-											<ul class="list">
-												<li>
-													<a href="#">Подjijijijiменю</a>
-												</li>
-												<li>
-													<a href="#">Подменю</a>
-												</li>
-												<li>
-													<a href="#">Подменю</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="#">Ссылка на страницу</a>
-								</li>
-								<li>
-									<a href="#">Ссылка на страницу</a>
-								</li>
-								<li>
-									<a href="#">Ссылка на страницу</a>
-								</li>
-							</ul>
-						</div>
-					</div>
 				</li>
-				<li>
+				<li class="header__nav-item">
 					<a href="#">Портфолио</a>
 				</li>
-				<li>
+				<li class="header__nav-item">
 					<a href="#">Акции</a>
 				</li>
-				<li>
+				<li class="header__nav-item">
 					<a href="#">Блог</a>
 				</li>
 			</ul>

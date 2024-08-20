@@ -1,18 +1,11 @@
 .dropdown {
   cursor: pointer;
   position: relative;
-  &:hover {
+  @include hover {
     .dropdown__item {
       transform: translateY(0px) scale(1);
       opacity: 1;
       visibility: visible;
-    }
-  }
-  @include tablet {
-    &.right {
-      .dropdown__item {
-        right: 0;
-      }
     }
   }
   &__item {
@@ -28,11 +21,15 @@
       visibility 0.2s ease,
       opacity 0.2s ease;
     z-index: 100;
-    @include tablet {
-      padding-top: 30px;
+    @include laptop {
+      position: static;
+      transform: translateY(0px) scale(1);
+      opacity: 1;
+      visibility: visible;
+      padding: 0;
     }
     .dropdown {
-      &:hover {
+      @include hover {
         .dropdown__item {
           transform: translateY(0px) scale(1) !important;
           opacity: 1 !important;
@@ -44,6 +41,13 @@
       transform: translateY(20px) scale(0.5) !important;
       visibility: hidden !important;
       opacity: 0 !important;
+      @include laptop {
+        position: static;
+        transform: translateY(0px) scale(1) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        padding: 0;
+      }
     }
   }
   &__body {
@@ -52,6 +56,11 @@
     border: 1px solid rgb(209, 209, 209);
     white-space: nowrap;
     color: black;
+    @include laptop {
+      border: none;
+      white-space: normal;
+      background-color: transparent;
+    }
     .dropdown {
       &__item {
         padding-top: 0;
@@ -59,16 +68,8 @@
         max-width: 220px;
         width: 100%;
         left: 100%;
-        @include tablet {
-          max-width: 220px;
-          width: 100%;
-          max-width: 130px;
-          &.left {
-            right: 100%;
-            left: auto;
-          }
-        }
-        @include mobile {
+        @include laptop {
+          max-width: none;
         }
       }
     }

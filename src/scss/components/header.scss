@@ -1,37 +1,6 @@
 .header {
-  // overflow: hidden;
-  &__top {
-    padding: 10px 30px;
-    background-color: var(--highland);
-    color: white;
-    display: none;
-    @include tablet {
-      display: block;
-    }
-    @include mobile {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-  &__top-list {
-    @include flex-between;
-    width: 100%;
-    li {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      font-size: 16px;
-    }
-    @include mobile {
-      li {
-        gap: 10px;
-      }
-      .header__dropdown-list {
-        li {
-          font-size: 12px;
-        }
-      }
-    }
+  @include laptop {
+    background-color: var(--wild-sand);
   }
   &__container {
     display: flex;
@@ -41,31 +10,66 @@
       align-items: start;
     }
     @include laptop {
-      flex-direction: column;
       align-items: center;
     }
-    @include tablet {
+    @include mobile {
+      gap: 20px;
+    }
+  }
+  &__btn-burger {
+    position: relative;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 17px;
+    height: 12px;
+    span {
       display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--highland);
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    &.active {
+      justify-content: center;
+      span {
+        position: absolute;
+        &:first-child {
+          transform: rotate(45deg)
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    @include laptop {
+      display: flex;
     }
   }
   &__logo {
     display: block;
     width: 205px;
+    @include laptop {
+      width: 150px;
+    }
     @include tablet {
-      display: none;
+      width: 100px;
     }
   }
   &__logo-img {
-    display: block;
     width: 100%;
     height: auto;
   }
   &__nav {
     display: flex;
     align-items: center;
+    flex: 1;
     gap: 30px;
     row-gap: 10px;
-    flex: 1;
     @include desktop {
       flex-wrap: wrap;
       padding-top: 10px;
@@ -78,12 +82,10 @@
     display: flex;
     align-items: center;
     gap: 25px;
-    li {
-      font-size: 14px;
-    }
-    a, span {
+    a,
+    span {
       transition: color 0.2s ease;
-      &:hover {
+      @include hover {
         color: var(--highland);
       }
     }
@@ -93,72 +95,125 @@
       justify-content: space-between;
     }
     @include laptop {
-      gap: 20px;
-    }
-    @include tablet {
-      gap: 30px;
+      position: fixed;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      overflow-y: scroll;
+      gap: 0px;
+      top: 48px;
+      left: 0;
+      bottom: 0;
+      max-width: 360px;
       width: 100%;
-      justify-content: center;
-      flex-wrap: wrap;
-      li {
-        font-size: 12px;
-        .dropdown__item {
-          padding-top: 10px;
-        }
+      z-index: 100;
+      transform: translateX(-360px);
+      transition: transform .5s ease;
+      &.open {
+        transform: translateX(0px);
       }
     }
-    @include mobile {
-      gap: 15px;
-      padding-bottom: 10px;
-      margin-right: -20px;
-      padding-right: 20px;
+    @include tablet {
+      top: 33px;
     }
   }
-  &__dropdown-btn {
+  &__nav-item {
+    font-size: 14px;
+    @include laptop {
+      width: 100%;
+      padding: 20px 10px;
+      border-bottom: 1px solid var(--alto);
+    }
+  }
+  &__spoller-btn {
     display: flex;
     align-items: center;
     gap: 10px;
     transition: color 0.2s ease;
-    &:hover {
+    a {
+      pointer-events: all;
+    }
+    @include hover {
       .header__dropdown-arrow {
         transform: rotate(180deg);
       }
     }
-    @include tablet {
-      gap: 6px;
+    &._spoller-active {
+      .header__spoller-plus {
+        span {
+          &:first-child {
+            transform: rotate(0deg);
+          }
+        }
+      }
     }
-  }
-  &__nav-btn-icon {
-    width: 25px;
-    height: 25px;
-    display: none;
-    @include tablet {
-      display: block;
-    }
-    @include mobile {
-      width: 20px;
-      height: 20px;
+    @include laptop {
+      justify-content: space-between;
+      width: 100%;
+      font-size: 16px;
     }
   }
   &__dropdown-arrow {
     width: 11px;
     height: 6px;
-    transition: transform .2s ease;
-    @include tablet {
-      height: 11px;
-    }
-    @include mobile {
-      width: 6px;
-      height: 6px;
+    transition: transform 0.2s ease;
+    @include laptop {
+      display: none;
     }
   }
-  &__dropdown-list {
-    li {
-      padding: 7px 3px;
-      &:not(:last-child) {
-        border-bottom: 1px solid rgb(209, 209, 209);
+  &__spoller-plus {
+    @include flex-center;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    display: none;
+    background-color: var(--highland);
+    @include laptop {
+      display: flex;
+    }
+    span {
+      position: absolute;
+      width: 15px;
+      height: 2px;
+      background-color: white;
+      transition: transform 0.2s ease;
+      &:first-child {
+        transform: rotate(90deg);
       }
-    }    
+    }
+  }
+  &__spoller-item {
+    padding: 7px 3px;
+    &:not(:last-child) {
+      border-bottom: 1px solid rgb(209, 209, 209);
+    }
+    @include laptop {
+      font-size: 14px;
+      padding: 15px 0px 15px 25px;
+    }
+  }
+  &__subspoller-btn {
+    @include flex-between;
+    &._spoller-active {
+      .header__spoller-plus {
+        span {
+          &:first-child {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+  &__subspoller-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0px;
+    li {
+      font-size: 12px;
+      padding-left: 15px;
+    }
   }
   &__location {
     display: flex;
@@ -167,7 +222,7 @@
     @include desktop {
       order: 1;
     }
-    @include tablet {
+    @include laptop {
       display: none;
     }
   }
@@ -196,9 +251,6 @@
       gap: 50px;
       align-items: center;
     }
-    @include tablet {
-      display: none;
-    }
   }
   &__tel {
     font-weight: 700;
@@ -207,12 +259,21 @@
     @include hover {
       color: var(--highland);
     }
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
   }
   &__btn-letter {
     font-size: 18px;
     text-decoration: underline;
     @include hover {
       text-decoration: none;
+    }
+    @include tablet {
+      display: none;
     }
   }
 }

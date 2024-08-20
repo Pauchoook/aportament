@@ -71,7 +71,7 @@ export default function spoller() {
           spollerTitle.classList.toggle("_spoller-active");
           _slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
         }
-        e.preventDefault();
+        // e.preventDefault();
       }
     }
     function hideSpollersBody(spollersBlock) {
@@ -231,4 +231,10 @@ export default function spoller() {
       return _slideUp(target, duration);
     }
   };
+}
+
+function uniqArray(array) {
+  return array.filter(function (item, index, self) {
+    return self.indexOf(item) === index;
+  });
 }
