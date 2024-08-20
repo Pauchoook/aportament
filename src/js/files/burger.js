@@ -7,17 +7,14 @@ export default function burger() {
 
     if (burger.classList.contains("open")) {
       handleClose();
-
     } else {
       burger.classList.add("open");
       burgerBtn.classList.add("active");
+      
+      document.body.classList.add("body-hidden");
+      burger.addEventListener("click", (e) => e.stopPropagation());
+      document.body.addEventListener("click", handleClose);
     }
-
-    document.body.classList.add("body-hidden");
-
-    burger.addEventListener("click", (e) => e.stopPropagation());
-
-    document.body.addEventListener("click", handleClose);
   });
 
   function handleClose() {

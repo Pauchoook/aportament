@@ -6,3 +6,47 @@
   padding: 0;
   color: inherit;
 }
+.btn-custom {
+  max-width: 250px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  flex-grow: 0;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  border-radius: 10px;
+  padding: 19px 0px;
+  transition: color .2s ease, background-color .2s ease;
+  @include mobile {
+    max-width: 230px;
+  }
+}
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border-color: var(--highland);
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(45deg, #7b9f6e 0%, #8bb17d 51.07%, #7b9f6e 100%);
+    z-index: -1;
+    transition: opacity .2s ease;
+  }
+  @include hover {
+    background-color: transparent;
+    color: var(--highland);
+    &::before {
+      opacity: 0;
+    }
+  }
+}
+.btn-stroke {
+  @include hover {
+    color: white;
+    background-color: black;
+  }
+}

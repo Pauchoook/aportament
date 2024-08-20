@@ -22,8 +22,8 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 17px;
-    height: 12px;
+    width: 30px;
+    height: 20px;
     span {
       display: block;
       width: 100%;
@@ -56,17 +56,13 @@
     @include laptop {
       width: 150px;
     }
-    @include tablet {
-      width: 100px;
-    }
   }
   &__logo-img {
     width: 100%;
     height: auto;
   }
   &__nav {
-    display: flex;
-    align-items: center;
+    @include flex-between;
     flex: 1;
     gap: 30px;
     row-gap: 10px;
@@ -74,8 +70,11 @@
       flex-wrap: wrap;
       padding-top: 10px;
     }
-    @include tablet {
-      padding-top: 15px;
+    @include laptop {
+      flex:none;
+      padding-top: 0;
+      width: fit-content;
+      margin-left: auto;
     }
   }
   &__nav-list {
@@ -104,10 +103,10 @@
       top: 48px;
       left: 0;
       bottom: 0;
-      max-width: 360px;
+      max-width: 500px;
       width: 100%;
       z-index: 100;
-      transform: translateX(-360px);
+      transform: translateX(-500px);
       transition: transform .5s ease;
       &.open {
         transform: translateX(0px);
@@ -241,7 +240,6 @@
     }
   }
   &__contacts {
-    margin-left: auto;
     display: flex;
     flex-direction: column;
     align-items: end;
