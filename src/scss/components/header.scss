@@ -56,6 +56,9 @@
     @include laptop {
       width: 150px;
     }
+    @include mobile {
+      width: 130px;
+    }
   }
   &__logo-img {
     width: 100%;
@@ -114,7 +117,10 @@
       }
     }
     @include tablet {
-      top: 33px;
+      top: 51px;
+    }
+    @include mobile {
+      top: 44px;
     }
   }
   &__nav-item {

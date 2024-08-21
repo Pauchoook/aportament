@@ -1,0 +1,59 @@
+.table {
+  max-width: 780px;
+  width: 100%;
+  @include tablet {
+    width: 100%;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  &__head {
+    display: flex;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: var(--highland);
+    color: white;
+    @include tablet {
+      width: 550px;
+    }
+  }
+  &__head-item {
+    display: block;
+    flex: 1;
+    font-weight: 500;
+    font-size: 16px;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__body {
+    margin: 0 auto;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid var(--alto);
+    width: calc(100% - 20px);
+    @include tablet {
+      width: 530px;
+      margin-left: 10px;
+    }
+  }
+  &__row {
+    display: flex;
+    width: 100%;
+    padding: 12px 13px;
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--alto);
+    }
+  }
+  &__row-item {
+    display: block;
+    flex: 1;
+    font-weight: 500;
+    font-size: 16px;
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+}

@@ -13,11 +13,15 @@
 @import "./ui/dropdown";
 @import "./ui/title";
 
+// mini-components
+@import "./mini-components/table";
+
 // components
 @import "./components/header";
 
 @import "./components/hero";
 @import "./components/catalog";
 @import "./components/about";
+@import "./components/blog";
 
 @import "./components/footer";
