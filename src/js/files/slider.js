@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 
@@ -51,5 +51,36 @@ export default function slider() {
         },
       },
     });
+  }
+
+  const tariffGallerySliders = document.querySelectorAll(".tariff__slider-gallery");
+  if (tariffGallerySliders.length) {
+    tariffGallerySliders.forEach((slider) => {
+      const swiper = new Swiper(slider, {
+        speed: 700,
+        modules: [Navigation],
+        grabCursor: true,
+        spaceBetween: 15,
+        navigation: {
+          prevEl: slider.querySelector(".tariff__slider-btn--prev"),
+          nextEl: slider.querySelector(".tariff__slider-btn--next")
+        }
+      });
+    });
+  }
+
+  if (window.matchMedia("(max-width: 479px)").matches) {
+    const tariffSlider = document.querySelector(".tariff__slider");
+    if (tariffSlider) {
+      const swiper = new Swiper(tariffSlider, {
+        speed: 700,
+        modules: [Autoplay],
+        autoplay: true,
+        grabCursor: true,
+        slidesPerView: "auto",
+        slideToClickedSlide: true,
+        spaceBetween: 10,
+      });
+    }
   }
 }
