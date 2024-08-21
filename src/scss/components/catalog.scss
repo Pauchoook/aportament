@@ -84,6 +84,7 @@
     }
   }
   &__slide {
+    box-sizing: border-box;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -103,7 +104,7 @@
       flex-basis: calc(50% - 7px);
     }
     @include mobile {
-      flex: auto;
+      flex: none;
       width: 175px !important;
     }
   }

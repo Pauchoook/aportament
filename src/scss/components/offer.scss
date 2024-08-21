@@ -1,0 +1,81 @@
+.offer {
+  padding: 35px 0px;
+  background-color: var(--highland);
+  color: white;
+  @include laptop {
+    padding: 25px;
+  }
+  @include mobile {
+    padding: 40px 0px;
+  }
+  &__container {
+    @include flex-between;
+    @include laptop {
+      flex-direction: column;
+      row-gap: 25px;
+    }
+  }
+  &__info {
+    @include laptop {
+      text-align: center;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__content {
+    margin: 0;
+    font-size: 18px;
+    @include desktop {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+      max-width: 230px;
+      margin: 0 auto;
+    }
+  }
+  &__buttons {
+    display: flex;
+    max-width: 530px;
+    width: 100%;
+    gap: 30px;
+    @include desktop {
+      max-width: 250px;
+      row-gap: 8px;
+      flex-direction: column;
+    }
+    @include laptop {
+      flex-direction: row;
+      max-width: none;
+      justify-content: center;
+      gap: 15px;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+  &__btn {
+    @include mobile {
+      max-width: 210px;
+    }
+    &.btn-primary {
+      border-color: white;
+      color: black;
+      @include hover {
+        background-color: transparent;
+        color: white;
+      }
+      &::before {
+        background: white;
+      }
+    }
+    &.btn-stroke {
+      @include hover {
+        background-color: white;
+        color: black;
+        border-color: white;
+      }
+    }
+  }
+}

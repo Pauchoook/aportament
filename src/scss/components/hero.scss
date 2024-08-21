@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   padding: 20px 0px 120px 0px;
+  overflow: hidden;
   z-index: 1;
   &__decor {
     position: absolute;
