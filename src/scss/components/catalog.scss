@@ -1,0 +1,130 @@
+.catalog {
+  position: relative;
+  padding-bottom: 40px;
+  z-index: 1;
+  &__filter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      row-gap: 10px;
+    }
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__filter-title {
+    margin: 0;
+    font-size: 22px;
+    color: var(--highland);
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  &__filter-arrow {
+    width: 30px;
+    height: 15px;
+    color: var(--highland);
+    @include mobile {
+      width: 20px;
+      height: 10px;
+    }
+  }
+  &__filter-list {
+    display: none;
+    @include tablet {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 5px;
+      margin-right: -15px;
+      padding-right: 15px;
+    }
+  }
+  &__filter-btn {
+    display: block;
+    padding: 9px 4px;
+    border: 1px solid var(--highland);
+
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      background-color: var(--highland);
+      color: white;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__slider {
+    margin-right: -15px !important;
+    padding-right: 15px !important; 
+  }
+  &__slider-wrapper {
+    gap: 20px;
+    flex-wrap: wrap;
+    @include tablet {
+      gap: 13px;
+    }
+    @include mobile {
+      gap: 0;
+      flex-wrap: nowrap;
+    }
+  }
+  &__slide {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 0 1 calc(20% - 16px);
+    @include desktop {
+      flex-basis: calc(25% - 15px);
+    }
+    @include laptop {
+      flex-basis: calc(33% - 11px);
+    }
+    @include tablet {
+      flex-basis: calc(50% - 7px);
+    }
+    @include mobile {
+      flex: auto;
+      width: 175px !important;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    @include tablet {
+      height: 100px;
+    }
+  }
+  &__slide-footer {
+    padding: 15px;
+  }
+  &__slide-title {
+    font-weight: 400;
+    margin: 0;
+    font-size: 16px;
+  }
+  &__slide-btn {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--highland);
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+}

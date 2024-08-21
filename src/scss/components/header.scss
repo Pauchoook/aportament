@@ -107,6 +107,7 @@
       width: 100%;
       z-index: 100;
       transform: translateX(-500px);
+      background-color: var(--wild-sand);
       transition: transform .5s ease;
       &.open {
         transform: translateX(0px);

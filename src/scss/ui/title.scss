@@ -19,3 +19,21 @@
     font-size: 28px;
   }
 }
+.title-show {
+  position: absolute;
+  margin: 0;
+  font-size: 100px;
+  color: rgba(123, 159, 110, 0.1);
+  text-transform: uppercase;
+  left: -7px;
+  top: -80px;
+  z-index: -1;
+  @include laptop {
+    font-size: 75px;
+  }
+  @include tablet {
+    font-size: 50px;
+    left: 0;
+    top: -35px;
+  }
+}
