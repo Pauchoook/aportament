@@ -283,6 +283,14 @@
     gap: 15px;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    &--bottom {
+      margin-top: 85px;
+    }
+    @include desktop {
+      &--bottom {
+        margin-top: 45px;
+      }
+    }
     @include tablet {
       margin-bottom: 20px;
     }

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240821170521">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240821202956">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -210,16 +210,38 @@
 				</div>
 				<div class="header__contacts">
 					<a href="tel:89000000000" class="header__tel">8 (900) 000-00-00</a>
-					<button class="btn header__btn-letter">Оставить заявку</button>
+					<button data-modal="modal-connection" class="btn btn-modal header__btn-letter">Оставить заявку</button>
 				</div>
 			</nav>
 		</div>
 	</header>
 
 	<main>
+		<div data-modal="modal-connection" class="modal modal-connection">
+			<div class="modal__overlay">
+				<div class="modal__window">
+					<button class="btn modal__close">
+						<div class="modal__close-wrapper">
+							<span></span>
+							<span></span>
+						</div>
+					</button>
+					<h2 class="title modal-connection__title">Оставьте заявку!</h2>
+					<p class="modal-connection__content">Мы скоро свяжемся с вами</p>
+					<form action="#" class="modal-connection__form">
+						<input type="tel" name="tel" placeholder="Телефон" class="input" />
+						<button class="btn btn-custom btn-primary modal-connection__btn">Оставить заявку</button>
+						<p class="modal-connection__form-politic">
+							Нажимая кнопку вы соглашаетесь с <a href="#">правилами политики конфиденциальности</a>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+
 
 		<section class="hero">
-			<img src="img/mini/points.svg" alt="points" class="hero__decor">
+			<img src="img/mini/points.svg" alt="points" class="hero__decor" />
 			<div class="container">
 				<h1 class="title title-1 hero__title">Премиум ремонт квартир</h1>
 			</div>
@@ -235,8 +257,12 @@
 						</p>
 					</div>
 					<div class="hero__buttons">
-						<div class="btn btn btn-custom btn-primary">Рассчитать стоимость</div>
-						<div class="btn btn btn-custom btn-stroke">Запись на замер</div>
+						<div data-modal="modal-connection" class="btn btn-modal btn-custom btn-primary">
+							Рассчитать стоимость
+						</div>
+						<div data-modal="modal-connection" class="btn btn-modal btn-custom btn-stroke">
+							Запись на замер
+						</div>
 					</div>
 					<ul class="list hero__spec">
 						<li class="hero__spec-item">Подберем мебель выгодно</li>
@@ -384,6 +410,187 @@
 			</div>
 		</section>
 
+		<section class="middle-price">
+			<div class="container middle-price__container">
+				<div class="middle-price__info">
+					<h2 class="title title-2 middle-price__title">
+						Средняя стоимость премиум ремонта по площади квартиры
+					</h2>
+					<p class="middle-price__content">
+						Премиум ремонт квартир — это высококачественное решение для тех, кто ценит роскошь и
+						комфорт. Каждая деталь внимательно продумывается, чтобы создать уютную и стильную
+						обстановку. Команда опытных специалистов «Центра Отделки» занимается выполнением всех работ
+						с использованием только лучших материалов.
+					</p>
+					<div class="table middle-price__table">
+						<div class="table__head">
+							<span class="table__head-item">Тип квартиры</span>
+							<span class="table__head-item">Площадь</span>
+							<span class="table__head-item">Цена на работу</span>
+							<span class="table__head-item">Цена материалов</span>
+						</div>
+						<div class="table__body">
+							<div class="table__row">
+								<span class="table__row-item">Студия</span>
+								<span class="table__row-item">13-20 м. кв.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+							</div>
+							<div class="table__row">
+								<span class="table__row-item">Студия</span>
+								<span class="table__row-item">13-20 м. кв.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+							</div>
+							<div class="table__row">
+								<span class="table__row-item">Студия</span>
+								<span class="table__row-item">13-20 м. кв.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+							</div>
+							<div class="table__row">
+								<span class="table__row-item">Студия</span>
+								<span class="table__row-item">13-20 м. кв.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+							</div>
+							<div class="table__row">
+								<span class="table__row-item">Студия</span>
+								<span class="table__row-item">13-20 м. кв.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+							</div>
+							<div class="table__row">
+								<span class="table__row-item">Студия</span>
+								<span class="table__row-item">13-20 м. кв.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+								<span class="table__row-item">700 тыс. руб.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="middle-price__column">
+					<div class="middle-price__img-wrapper">
+						<img src="img/text-img-price.svg" alt="text" class="middle-price__img-text" />
+						<img src="img/middle-price.webp" alt="middle-price" class="middle-price__img" />
+					</div>
+					<div class="middle-price__gallery">
+						<h5 class="middle-price__gallery-title">Мы в YouTube</h5>
+						<div class="middle-price__gallery-body">
+							<a href="https://www.youtube.com/watch?v=y2emL1fMRyY&t=2513s" data-fancybox="video-gallery" class="middle-price__gallery-btn">
+								<img src="https://i.ytimg.com/vi/y2emL1fMRyY/hq720.webp?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDm8pwg_pXH-tW0S85yv6hEE-p78A" alt="previews" class="middle-price__gallery-img" />
+							</a>
+							<a href="https://www.youtube.com/watch?v=y2emL1fMRyY&t=2513s" data-fancybox="video-gallery" class="middle-price__gallery-btn">
+								<img src="https://i.ytimg.com/vi/y2emL1fMRyY/hq720.webp?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDm8pwg_pXH-tW0S85yv6hEE-p78A" alt="previews" class="middle-price__gallery-img" />
+							</a>
+							<a href="https://www.youtube.com/watch?v=y2emL1fMRyY&t=2513s" data-fancybox="video-gallery" class="middle-price__gallery-btn">
+								<img src="https://i.ytimg.com/vi/y2emL1fMRyY/hq720.webp?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDm8pwg_pXH-tW0S85yv6hEE-p78A" alt="previews" class="middle-price__gallery-img" />
+							</a>
+							<a href="https://www.youtube.com/watch?v=y2emL1fMRyY&t=2513s" data-fancybox="video-gallery" class="middle-price__gallery-btn">
+								<img src="https://i.ytimg.com/vi/y2emL1fMRyY/hq720.webp?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDm8pwg_pXH-tW0S85yv6hEE-p78A" alt="previews" class="middle-price__gallery-img" />
+							</a>
+							<a href="https://www.youtube.com/watch?v=y2emL1fMRyY&t=2513s" data-fancybox="video-gallery" class="middle-price__gallery-btn">
+								<img src="https://i.ytimg.com/vi/y2emL1fMRyY/hq720.webp?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDm8pwg_pXH-tW0S85yv6hEE-p78A" alt="previews" class="middle-price__gallery-img" />
+							</a>
+							<a href="https://www.youtube.com/watch?v=y2emL1fMRyY&t=2513s" data-fancybox="video-gallery" class="middle-price__gallery-btn">
+								<img src="https://i.ytimg.com/vi/y2emL1fMRyY/hq720.webp?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDm8pwg_pXH-tW0S85yv6hEE-p78A" alt="previews" class="middle-price__gallery-img" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="catalog">
+			<div class="container">
+				<h2 class="title-show">Дизайн</h2>
+				<div class="catalog__filter">
+					<h3 class="catalog__filter-title">По метражу</h3>
+					<svg class="catalog__filter-arrow">
+						<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+					</svg>
+					<div class="catalog__filter-list catalog__filter-list--type"></div>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--type,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+				</div>
+				<div class="catalog__filter">
+					<h3 class="catalog__filter-title">По типу</h3>
+					<svg class="catalog__filter-arrow">
+						<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+					</svg>
+					<div class="catalog__filter-list catalog__filter-list--square"></div>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+					<a data-da=".catalog__filter-list--square,744, 0" href="#" class="ul catalog__filter-btn">33 кв. м² </a>
+				</div>
+				<div class="swiper catalog__slider">
+					<div class="swiper-wrapper catalog__slider-wrapper">
+						<a href="#" class="swiper-slide catalog__slide">
+							<img src="img/catalog.webp" alt="catalog" class="catalog__img" />
+							<div class="catalog__slide-footer">
+								<h5 class="catalog__slide-title">Стиль модернизм</h5>
+								<div class="catalog__slide-btn">Подробнее -></div>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide catalog__slide">
+							<img src="img/catalog.webp" alt="catalog" class="catalog__img" />
+							<div class="catalog__slide-footer">
+								<h5 class="catalog__slide-title">Стиль модернизм</h5>
+								<div class="catalog__slide-btn">Подробнее -></div>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide catalog__slide">
+							<img src="img/catalog.webp" alt="catalog" class="catalog__img" />
+							<div class="catalog__slide-footer">
+								<h5 class="catalog__slide-title">Стиль модернизм</h5>
+								<div class="catalog__slide-btn">Подробнее -></div>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide catalog__slide">
+							<img src="img/catalog.webp" alt="catalog" class="catalog__img" />
+							<div class="catalog__slide-footer">
+								<h5 class="catalog__slide-title">Стиль модернизм</h5>
+								<div class="catalog__slide-btn">Подробнее -></div>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide catalog__slide">
+							<img src="img/catalog.webp" alt="catalog" class="catalog__img" />
+							<div class="catalog__slide-footer">
+								<h5 class="catalog__slide-title">Стиль модернизм</h5>
+								<div class="catalog__slide-btn">Подробнее -></div>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide catalog__slide">
+							<img src="img/catalog.webp" alt="catalog" class="catalog__img" />
+							<div class="catalog__slide-footer">
+								<h5 class="catalog__slide-title">Стиль модернизм</h5>
+								<div class="catalog__slide-btn">Подробнее -></div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="blog">
 			<div class="container blog__container">
 				<div>
@@ -417,7 +624,7 @@
 									</li>
 								</ul>
 							</div>
-							<button class="btn blog__btn blog__btn-stroke">
+							<button data-modal="modal-connection" class="btn btn-modal blog__btn blog__btn-stroke">
 								<svg class="blog__btn-icon">
 									<use xlink:href="img/icons/icons.svg#icon-roll"></use>
 								</svg>
@@ -580,7 +787,7 @@
 						</p>
 						<img src="img/about.webp" alt="about" class="blog__item-img" />
 					</div>
-					<div class="table">
+					<div id="calc-estimates" class="table">
 						<div class="table__head">
 							<span class="table__head-item">Тип квартиры</span>
 							<span class="table__head-item">Площадь</span>
@@ -626,9 +833,42 @@
 							</div>
 						</div>
 					</div>
+					<div class="blog__head blog__head--bottom">
+						<ul class="list blog__head-list">
+							<li class="blog__head-item">
+								<svg class="blog__head-icon">
+									<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+								</svg>
+								<p>4,5 тыс</p>
+							</li>
+							<li class="blog__head-item">
+								<svg class="blog__head-icon">
+									<use xlink:href="img/icons/icons.svg#icon-like"></use>
+								</svg>
+								<p>100</p>
+							</li>
+							<li class="blog__head-item">Время чтения:<span>5 минут</span></li>
+						</ul>
+						<div class="blog__head-social">
+							<span class="blog__head-social-content">Поделиться: </span>
+							<ul class="list blog__head-social-list">
+								<li>
+									<a href="#" target="_blank" class="blog__head-social-btn">
+										<img src="img/mini/vk.svg" alt="vk" class="blog__head-social-icon" />
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" class="blog__head-social-btn">
+										<img src="img/mini/tg.svg" alt="tg" class="blog__head-social-icon" />
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
+
 
 
 	</main>
@@ -636,7 +876,7 @@
 		<div class="container">
 		</div>
 	</footer>
-	<script src="js/app.min.js?_v=20240821170521"></script>
+	<script src="js/app.min.js?_v=20240821202956"></script>
 </body>
 
 </html>

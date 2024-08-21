@@ -1,0 +1,171 @@
+.middle-price {
+  position: relative;
+  padding-bottom: 100px;
+  overflow: hidden;
+  z-index: 1;
+  @include laptop {
+    &::before {
+      display: none;
+    }
+  }
+  @include tablet {
+    padding-bottom: 60px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background: url('@img/mini/points.svg') 0 0 / 100% 100% no-repeat;
+    width: 470px;
+    height: 585px;
+    bottom: 100px;
+    right: -70px;
+    z-index: -1;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    @include desktop {
+      row-gap: 70px;
+    }
+  }
+  &__info {
+    max-width: 800px;
+    @include desktop {
+      max-width: none;
+      width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+  &__content {
+    font-size: 16px;
+    margin: 0px 0px 60px 0px;
+    @include tablet {
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+  }
+  &__table {
+    @include desktop {
+      max-width: none;
+    }
+  }
+  &__column {
+    max-width: 540px;
+    @include desktop {
+      max-width: none;
+      width: 100%;
+    }
+  }
+  &__img-wrapper {
+    @include flex-center;
+    position: relative;
+    width: 100%;
+    padding-top: 25px;
+    @include desktop {
+      width: 100%;
+      padding-top: 40px;
+    }
+    @include tablet {
+      padding-top: 30px;
+    }
+    @include mobile {
+      padding-top: 20px;
+    }
+  }
+  &__img-text {
+    position: absolute;
+    width: 570px;
+    max-width: none;
+    top: 0;
+    @include laptop {
+      width: 430px;
+    }
+    @include tablet {
+      width: 295px;
+    }
+    @include mobile {
+      width: 220px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 675px;
+    object-fit: cover;
+    border-radius: 10px;
+    @include desktop {
+      height: 290px;
+    }
+    @include tablet {
+      height: 245px;
+    }
+    @include mobile {
+      height: 125px;
+    }
+  }
+  &__gallery {
+    margin-top: 40px;
+  }
+  &__gallery-title {
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0px 0px 25px 0px;
+    @include desktop {
+      text-align: center;
+    }
+  }
+  &__gallery-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+    @include desktop {
+      justify-content: start;
+      row-gap: 30px;
+      gap: 15px;
+    }
+    @include laptop {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+    @include tablet {
+      row-gap: 16px;
+      gap: 16px;
+    }
+    @include mobile {
+      row-gap: 8px;
+      gap: 8px;
+    }
+  }
+  &__gallery-btn {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 265px;
+    height: 145px;
+    @include desktop {
+      width: 235px;
+    }
+    @include laptop {
+      width: calc(33% - 8px);
+    }
+    @include tablet {
+      width: calc(50% - 8px);
+    }
+    @include mobile {
+      width: calc(50% - 4px);
+      height: 90px;
+    }
+  }
+  &__gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

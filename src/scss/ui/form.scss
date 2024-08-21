@@ -1,0 +1,21 @@
+.input {
+  border: none;
+  border-radius: 10px;
+  padding: 19px;
+  outline: none;
+  width: 100%;
+  border: 1px solid var(--alto);
+  color: var(--dusty-gray);
+
+  font-size: 18px;
+
+  @include laptop {
+    font-size: 16px;
+    padding: 17px;
+  }
+
+  &::placeholder {
+    font-size: inherit;
+    color: currentColor;
+  }
+}

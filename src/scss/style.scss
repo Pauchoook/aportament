@@ -12,9 +12,12 @@
 @import "./ui/list";
 @import "./ui/dropdown";
 @import "./ui/title";
+@import "./ui/modal";
+@import "./ui/form";
 
 // mini-components
 @import "./mini-components/table";
+@import "./mini-components/modal-connection";
 
 // components
 @import "./components/header";
@@ -23,5 +26,7 @@
 @import "./components/catalog";
 @import "./components/about";
 @import "./components/blog";
+@import "./components/middle-price";
+@import "./components/articles";
 
 @import "./components/footer";
