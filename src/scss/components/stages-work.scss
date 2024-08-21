@@ -1,0 +1,136 @@
+.stages-work {
+  padding: 70px 0px;
+  @include mobile {
+    padding: 35px 0px;
+    background-color: white;
+  }
+  &__body {
+    background-color: white;
+    border-radius: 10px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 50px;
+    @include tablet {
+      row-gap: 40px;
+    }
+    @include mobile {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+  &__info {
+    max-width: 685px;
+    @include desktop {
+      max-width: none;
+    }
+  }
+  &__title {
+    margin-bottom: 25px;
+  }
+  &__content {
+    font-size: 16px;
+    margin: 0px 0px 25px 0px;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+  &__img {
+    width: 100%;
+    border-radius: 10px;
+    @include desktop {
+      width: 680px;
+    }
+  }
+  &__main {
+    max-width: 600px;
+    @include desktop {
+      max-width: none;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    @include tablet {
+      gap: 25px;
+    }
+    @include mobile {
+      gap: 20px;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-left: 50px;
+    @include hover {
+      &::before {
+        background-color: black;
+      }
+    }
+    &.active {
+      &::before {
+        background-color: black;
+      }
+    }
+    &:not(:last-child) {
+      &::after {
+        top: 23px;
+        width: 1px;
+        background-color: black;
+        left: 7px;
+        bottom: -53px;
+      }
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+    }
+    &::before {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid black;
+      left: 0;
+      top: 8px;
+      transition: background-color 0.2s ease;
+    }
+    @include tablet {
+      &:not(:last-child) {
+        &::after {
+          bottom: -35px;
+        }
+      }
+    }
+    @include mobile {
+      &:not(:last-child) {
+        &::after {
+          bottom: -28px;
+        }
+      }
+    }
+  }
+  &__item-title {
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0px 0px 5px 0px;
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
+  &__item-content {
+    margin: 0;
+    font-size: 16px;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}

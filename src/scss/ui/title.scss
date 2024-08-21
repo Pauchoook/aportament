@@ -23,6 +23,9 @@
   @include desktop {
     font-size: 40px;
   }
+  @include laptop {
+    font-size: 35px;
+  }
   @include mobile {
     font-size: 25px;
   }
