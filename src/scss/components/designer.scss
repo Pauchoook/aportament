@@ -1,0 +1,122 @@
+.designer {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 60px;
+  z-index: 1;
+  @include desktop {
+    padding-bottom: 90px;
+  }
+  @include mobile {
+    padding-bottom: 35px;
+  }
+  &__container {
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    width: 530px;
+    bottom: -115px;
+    left: 40px;
+    z-index: -1;
+    @include desktop {
+      width: 465px;
+    }
+    @include laptop {
+      left: -20px;
+      width: 435px;
+    }
+    @include tablet {
+      width: 415px;
+      left: 0;
+    }
+    @media (max-width: 599px) {
+      width: 250px;
+    }
+    @include mobile {
+      left: auto;
+      width: 315px;
+      bottom: 40px;
+      right: -205px;
+    }
+  }
+  &__info {
+    max-width: 630px;
+    padding-left: 120px;
+    margin: 0 auto;
+    @include desktop {
+      padding-left: 0;
+      margin-right: 0;
+    }
+    @include laptop {
+      max-width: 465px;
+    }
+    @include tablet {
+      max-width: 325px;
+    }
+    @include mobile {
+      max-width: none;
+    }
+  }
+  &__name {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--alto);
+    max-width: 355px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 90px;
+      background-color: var(--highland);
+      left: -135px;
+    }
+    @include tablet {
+      font-size: 16px;
+      &::before {
+        width: 65px;
+        left: -80px;
+      }
+    }
+    @include mobile {
+      font-size: 12px;
+      margin-bottom: 12px;
+      max-width: 225px;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+    @include tablet {
+      font-size: 22px;
+    }
+    @include mobile {
+      font-size: 14px;
+      max-width: 200px;
+    }
+  }
+  &__content {
+    font-size: 18px;
+    margin: 0px 0px 25px 0px;
+    @include desktop {
+      font-size: 16px;
+    }
+    @include tablet {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    @include mobile {
+      font-size: 14px;
+      max-width: 200px;
+    }
+  }
+  &__btn {
+    max-width: 450px;
+  }
+}
