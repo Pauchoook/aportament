@@ -1,0 +1,64 @@
+.footer {
+  padding: 35px 0px;
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    row-gap: 35px;
+    padding-bottom: 30px;
+    @include tablet {
+      gap: 0px;
+      row-gap: 35px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+    @include tablet {
+      flex: 0 1 33%;
+    }
+    @include mobile {
+      flex-basis: 50%;
+    }
+    a {
+      font-weight: 500;
+      font-size: 14px;
+      transition: color .2s ease;
+      @include hover {
+        color: var(--highland);
+      }
+    }
+  }
+  &__bottom {
+    @include flex-between;
+    padding-top: 25px;
+    border-top: 1px solid var(--alto);
+    @include tablet {
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+  &__copyright {
+    font-size: 16px;
+    margin: 0;
+    @include mobile {
+      font-size: 14px;
+      max-width: 220px;
+      margin: 0 auto;
+    }
+  }
+  &__politic {
+    font-size: 16px;
+    @include hover {
+      color: var(--highland);
+      text-decoration: underline;
+    }
+    @include mobile {
+      font-size: 12px;
+      text-decoration: underline;
+    }
+  }
+}
