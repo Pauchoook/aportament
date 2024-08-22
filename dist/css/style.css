@@ -1865,7 +1865,7 @@ body {
 }
 .contacts__form-btn {
   margin-top: 20px;
-  max-width: 100%
+  max-width: 100%!important
 }
 .contacts__form-politic {
   margin: 15px 0 0 0;
