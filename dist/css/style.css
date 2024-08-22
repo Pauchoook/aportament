@@ -1842,7 +1842,7 @@ body {
   max-width: 300px
 }
 .contacts__social-btn {
-  max-width: 100%
+  max-width: 100%!important
 }
 .contacts__social-btn--wh {
   color: #6ebf3a
@@ -1922,7 +1922,6 @@ body {
   row-gap: 14px
 }
 .footer__list a {
-  font-weight: 500;
   font-size: 14px;
   transition: color .2s ease
 }
@@ -4750,7 +4749,7 @@ html.with-fancybox body.hide-scrollbar {
   .designer__img {
     left: auto;
     width: 315px;
-    bottom: 40px;
+    bottom: 0;
     right: -205px
   }
   .designer__info {

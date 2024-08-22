@@ -113,7 +113,7 @@
     }
   }
   &__social-btn {
-    max-width: 100%;
+    max-width: 100% !important;
     &--wh {
       color: #6ebf3a;
       @include hover {
