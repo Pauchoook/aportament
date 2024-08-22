@@ -7,6 +7,7 @@ import slider from "./files/slider.js";
 import smoothScroll from "./files/smooth-scroll.js";
 import modal from "./files/modal.js";
 import video from "./files/video.js";
+import map from "./files/map.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -16,3 +17,4 @@ slider();
 smoothScroll();
 modal();
 video();
+map();

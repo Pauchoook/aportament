@@ -42,7 +42,6 @@ export default function slider() {
       on: {
         init: () => {
           const firstBtnPagination = document.querySelector(".blog__slider-pagination-btn");
-          console.log(firstBtnPagination);
           firstBtnPagination.classList.add("active");
         },
         slideChange: ({ activeIndex }) => {
@@ -122,7 +121,6 @@ export default function slider() {
         on: {
           init: () => {
             const firstBtnPagination = document.querySelector(".portfolio__pagination-btn");
-            console.log(firstBtnPagination);
             firstBtnPagination.classList.add("active");
           },
           slideChange: ({ activeIndex }) => {

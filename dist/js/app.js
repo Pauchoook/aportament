@@ -4060,7 +4060,6 @@
                 on: {
                     init: () => {
                         const firstBtnPagination = document.querySelector(".blog__slider-pagination-btn");
-                        console.log(firstBtnPagination);
                         firstBtnPagination.classList.add("active");
                     },
                     slideChange: ({activeIndex}) => {
@@ -4130,7 +4129,6 @@
                 on: {
                     init: () => {
                         const firstBtnPagination = document.querySelector(".portfolio__pagination-btn");
-                        console.log(firstBtnPagination);
                         firstBtnPagination.classList.add("active");
                     },
                     slideChange: ({activeIndex}) => {
@@ -8930,6 +8928,53 @@
     function video() {
         Oe.bind('[data-fancybox="video-gallery"]', {});
     }
+    function map() {
+        const contactsMap = document.querySelector("#map");
+        const btnMap = document.querySelector("#map-btn");
+        const btnMapNext = document.querySelector("#map-btn-next");
+        const inputMap = document.querySelector("#map-input");
+        if (contactsMap) {
+            function init() {
+                const center = JSON.parse(contactsMap.dataset.center);
+                const zoom = Number(contactsMap.dataset.zoom);
+                const map = new ymaps.Map("map", {
+                    center,
+                    zoom
+                });
+                btnMap.addEventListener("click", (() => {
+                    inputMap.style.display = "block";
+                    btnMap.remove();
+                    btnMapNext.style.display = "block";
+                    btnMapNext.addEventListener("click", (() => {
+                        if (inputMap.value) {
+                            map.controls.add("routePanelControl", {
+                                maxWidth: 260
+                            });
+                            var routePanel = map.controls.get("routePanelControl").routePanel;
+                            routePanel.options.set("adjustMapMargin", true);
+                            routePanel.state.set({
+                                fromEnabled: false,
+                                toEnabled: false,
+                                from: inputMap.value,
+                                to: center,
+                                type: "auto"
+                            });
+                            inputMap.remove();
+                            btnMapNext.remove();
+                        }
+                    }));
+                }));
+                map.controls.remove("geolocationControl");
+                map.controls.remove("searchControl");
+                map.controls.remove("trafficControl");
+                map.controls.remove("typeSelector");
+                map.controls.remove("fullscreenControl");
+                map.controls.remove("zoomControl");
+                map.controls.remove("rulerControl");
+            }
+            ymaps.ready(init);
+        }
+    }
     isWebp();
     mediaAdaptive();
     spoller();
@@ -8938,4 +8983,5 @@
     smoothScroll();
     modal();
     video();
+    map();
 })();
