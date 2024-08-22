@@ -563,6 +563,25 @@ body {
 .modal-connection__form-politic a {
   text-decoration: underline
 }
+.slider-btn {
+  position: absolute;
+  top: calc(50% - 17px);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--highland);
+  color: #fff;
+  transition: color .2s ease,background-color .2s ease;
+  z-index: 10
+}
+.slider-btn--prev {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.slider-btn__arrow {
+  width: 13px;
+  height: 13px
+}
 .header__container {
   display: flex;
   align-items: center;
@@ -1541,32 +1560,112 @@ body {
   -o-object-fit: cover;
   object-fit: cover
 }
-.tariff__slider-btn {
-  position: absolute;
-  top: calc(50% - 17px);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background-color: var(--highland);
-  color: #fff;
-  transition: color .2s ease,background-color .2s ease;
-  z-index: 10
-}
 .tariff__slider-btn--prev {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
   left: 15px
 }
 .tariff__slider-btn--next {
   right: 15px
 }
-.tariff__slider-arrow {
-  width: 13px;
-  height: 13px
-}
 .tariff__card-btn {
   margin-top: 15px;
   max-width: none
+}
+.portfolio {
+  position: relative;
+  padding-bottom: 40px
+}
+.portfolio__body {
+  position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 30px 80px
+}
+.portfolio__slider-btn {
+  width: 54px;
+  height: 54px
+}
+.portfolio__slider-btn--prev {
+  left: 20px
+}
+.portfolio__slider-btn--next {
+  right: 20px
+}
+.portfolio__slider-btn .slider-btn__arrow {
+  width: 22px
+}
+.portfolio__title {
+  text-align: center;
+  margin-bottom: 50px
+}
+.portfolio__slide {
+  display: flex!important;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 50px
+}
+.portfolio__gallery {
+  max-width: 610px
+}
+.portfolio__gallery-img {
+  width: 100%;
+  height: 345px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px
+}
+.portfolio__pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px
+}
+.portfolio__pagination-btn {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden
+}
+.portfolio__pagination-btn.active::before {
+  opacity: 1
+}
+.portfolio__pagination-btn::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-radius: 10px;
+  border: 2px solid var(--highland);
+  opacity: 0;
+  transition: opacity .2s ease
+}
+.portfolio__pagination-view {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.portfolio__slide-info {
+  max-width: 610px
+}
+.portfolio__slide-title {
+  font-size: 30px;
+  margin-bottom: 12px
+}
+.portfolio__slide-content {
+  font-size: 16px;
+  margin: 0 0 10px 0
+}
+.portfolio__spec {
+  display: flex;
+  flex-direction: column;
+  gap: 9px
+}
+.portfolio__spec-item {
+  font-size: 16px
+}
+.portfolio__spec-item span {
+  font-weight: 600
 }
 @font-face {
   font-family: swiper-icons;
@@ -3449,6 +3548,9 @@ html.with-fancybox body.hide-scrollbar {
     flex-basis: calc(33% - 24px);
     padding: 10px 15px 20px 15px
   }
+  .portfolio__gallery {
+    max-width: 100%
+  }
 }
 @media (max-width:992px) {
   .dropdown__item {
@@ -3886,6 +3988,60 @@ html.with-fancybox body.hide-scrollbar {
   .tariff__square {
     font-size: 16px
   }
+  .portfolio__body {
+    background-color: rgba(0,0,0,0);
+    padding: 0;
+    max-width: 455px;
+    margin: 0 auto
+  }
+  .portfolio__slider-btn--prev {
+    left: -70px
+  }
+  .portfolio__slider-btn--next {
+    right: -70px
+  }
+  .portfolio__slide {
+    row-gap: 25px
+  }
+  .portfolio__gallery-img {
+    height: 235px
+  }
+  .portfolio__pagination {
+    gap: 12px
+  }
+  .portfolio__pagination-btn {
+    width: 65px;
+    height: 65px
+  }
+  .portfolio__slide-title {
+    font-size: 25px
+  }
+  .portfolio__slide-content {
+    font-size: 14px;
+    margin-bottom: 20px
+  }
+  .portfolio__spec-item {
+    font-size: 14px
+  }
+}
+@media (max-width:599px) {
+  .portfolio .container {
+    padding: 0 30px
+  }
+  .portfolio__slider-btn {
+    width: 20px;
+    height: 20px
+  }
+  .portfolio__slider-btn--prev {
+    left: -25px
+  }
+  .portfolio__slider-btn--next {
+    right: -25px
+  }
+  .portfolio__slider-btn .slider-btn__arrow {
+    width: 10px;
+    height: 12px
+  }
 }
 @media (max-width:479px) {
   .container {
@@ -4107,6 +4263,26 @@ html.with-fancybox body.hide-scrollbar {
   .tariff__img {
     height: 155px
   }
+  .portfolio__slide {
+    row-gap: 15px
+  }
+  .portfolio__gallery-img {
+    height: 175px
+  }
+  .portfolio__pagination {
+    gap: 8px
+  }
+  .portfolio__pagination-btn {
+    width: 40px;
+    height: 40px
+  }
+  .portfolio__slide-title {
+    font-size: 20px;
+    margin-bottom: 8px
+  }
+  .portfolio__slide-content {
+    font-size: 12px
+  }
 }
 @media (any-hover:hover) {
   .btn-primary:hover {
@@ -4137,6 +4313,10 @@ html.with-fancybox body.hide-scrollbar {
   }
   .modal-connection__form-politic a:hover {
     color: var(--highland)
+  }
+  .slider-btn:hover {
+    color: var(--highland);
+    background-color: #fff
   }
   .header__nav-list a:hover,
   .header__nav-list span:hover {
@@ -4204,9 +4384,8 @@ html.with-fancybox body.hide-scrollbar {
   .stages-work__item:hover::before {
     background-color: #000
   }
-  .tariff__slider-btn:hover {
-    color: var(--highland);
-    background-color: #fff
+  .portfolio__pagination-btn:hover::before {
+    opacity: 1
   }
 }
 @media (hover:hover) {

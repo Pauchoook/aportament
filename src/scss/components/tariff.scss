@@ -121,27 +121,11 @@
     }
   }
   &__slider-btn {
-    position: absolute;
-    top: calc(50% - 17px);
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: var(--highland);
-    color: white;
-    transition:
-      color 0.2s ease,
-      background-color 0.2s ease;
-    z-index: 10;
     &--prev {
-      transform: rotate(180deg);
       left: 15px;
     }
     &--next {
       right: 15px;
-    }
-    @include hover {
-      color: var(--highland);
-      background-color: white;
     }
     @include laptop {
       &--prev {
@@ -151,10 +135,6 @@
         right: 10px;
       }
     }
-  }
-  &__slider-arrow {
-    width: 13px;
-    height: 13px;
   }
   &__card-btn {
     margin-top: 15px;

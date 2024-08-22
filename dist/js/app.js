@@ -4097,6 +4097,49 @@
                 });
             }
         }
+        const portfolioSlider = document.querySelector(".portfolio__slider");
+        if (portfolioSlider) {
+            new Swiper(portfolioSlider, {
+                speed: 700,
+                modules: [ Autoplay, Navigation ],
+                autoplay: true,
+                grabCursor: true,
+                navigation: {
+                    prevEl: ".portfolio__slider-btn--prev",
+                    nextEl: ".portfolio__slider-btn--next"
+                }
+            });
+        }
+        const galleryPorfolioSliders = document.querySelectorAll(".portfolio__gallery-slider");
+        if (galleryPorfolioSliders.length) galleryPorfolioSliders.forEach((slider => {
+            const buttonsPagination = slider.closest(".portfolio__gallery").querySelectorAll(".portfolio__pagination-btn");
+            new Swiper(slider, {
+                speed: 700,
+                modules: [ Autoplay, Pagination ],
+                autoplay: true,
+                grabCursor: true,
+                slideToClickedSlide: true,
+                slidesPerView: 1,
+                spaceBetween: 15,
+                pagination: {
+                    el: slider.closest(".portfolio__gallery").querySelector(".portfolio__pagination"),
+                    clickable: true,
+                    type: "custom",
+                    bulletClass: "portfolio__pagination-btn"
+                },
+                on: {
+                    init: () => {
+                        const firstBtnPagination = document.querySelector(".portfolio__pagination-btn");
+                        console.log(firstBtnPagination);
+                        firstBtnPagination.classList.add("active");
+                    },
+                    slideChange: ({activeIndex}) => {
+                        buttonsPagination.forEach((btn => btn.classList.remove("active")));
+                        buttonsPagination[activeIndex].classList.add("active");
+                    }
+                }
+            });
+        }));
     }
     function smoothScroll() {
         document.querySelectorAll(".anchor").forEach((link => {
