@@ -1785,7 +1785,7 @@ body {
   margin: 0 0 25px 0
 }
 .designer__btn {
-  max-width: 450px
+  max-width: 450px!important
 }
 .contacts__body {
   display: flex;
